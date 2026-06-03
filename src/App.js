@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
+/* ===== COMPONENTS ===== */
+import Navbar from "./component/Navbar";
+import HeroSection from "./component/home";
+import AboutUs from "./component/AboutUs";
+import MenuHighlights from "./component/MenuHighlights";
+import WhyChooseUs from "./component/WhyChooseUs";
+import ReviewPage from "./component/ReviewPage";
+import ContactUs from "./component/contactus";
+import Footer from "./component/Footer";
+import InteractiveMenu from "./component/InteractiveMenu"; // ✅ Capital letter
+
+/* ===== HOME PAGE ===== */
+function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+
+      <HeroSection />
+      <AboutUs />
+      <InteractiveMenu />   {/* ✅ Correct usage */}
+      <MenuHighlights />
+      <WhyChooseUs />
+      <ReviewPage />
+      <ContactUs />
+      <Footer />
+    </>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        {/* HOME / LANDING PAGE */}
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
+  );
+}
