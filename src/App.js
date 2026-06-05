@@ -1,42 +1,33 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-/* ===== COMPONENTS ===== */
 import Navbar from "./component/Navbar";
 import HeroSection from "./component/home";
 import AboutUs from "./component/AboutUs";
 import MenuHighlights from "./component/MenuHighlights";
-import WhyChooseUs from "./component/WhyChooseUs";
-import ReviewPage from "./component/ReviewPage";
 import ContactUs from "./component/contactus";
 import Footer from "./component/Footer";
-import InteractiveMenu from "./component/InteractiveMenu"; // ✅ Capital letter
+import ScrollToTop from "./component/ScrollToTop";
 
-/* ===== HOME PAGE ===== */
-function Home() {
+function App() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
 
-      <HeroSection />
-      <AboutUs />
-      <InteractiveMenu />   {/* ✅ Correct usage */}
-      <MenuHighlights />
-      <WhyChooseUs />
-      <ReviewPage />
-      <ContactUs />
+      <ScrollToTop />
+
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<HeroSection />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/menu" element={<MenuHighlights />} />
+          <Route path="/contact" element={<ContactUs />} />
+        </Routes>
+      </main>
+
       <Footer />
-    </>
+    </div>
   );
 }
 
-export default function App() {
-  return (
-    <Router>
-      <Routes>
-        {/* HOME / LANDING PAGE */}
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
-  );
-}
+export default App;

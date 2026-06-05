@@ -1,9 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion"; 
 import cafeBg from "../assets/cafe-bg1.jpg";
+import AboutUs from "./AboutUs";
+import MenuHighlights from "./MenuHighlights";
+import WhyChooseUs from "./WhyChooseUs";
+import ReviewPage from "./ReviewPage";
+import InteractiveMenu from "./InteractiveMenu";
+import ContactUs from "./contactus";
+
 
 export default function LuxuryHeroSection() {
   return (
+       <>
     <section 
       id="home" 
       className="relative min-h-screen w-full flex items-center justify-start overflow-hidden bg-black select-none"
@@ -118,5 +126,12 @@ export default function LuxuryHeroSection() {
       </div>
 
     </section>
+     <AboutUs />
+      <MenuHighlights />
+      <WhyChooseUs />
+      <InteractiveMenu />
+      <ReviewPage />
+       < ContactUs/>
+      </>
   );
 }
