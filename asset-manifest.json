@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/NewTipTopCafe/static/css/main.4b9e18e6.css",
+    "main.js": "/NewTipTopCafe/static/js/main.af5514ed.js",
+    "static/js/453.fd2f0c4a.chunk.js": "/NewTipTopCafe/static/js/453.fd2f0c4a.chunk.js",
+    "static/media/cafe-bg1.jpg": "/NewTipTopCafe/static/media/cafe-bg1.fc6205b18cdbaa6c166f.jpg",
+    "index.html": "/NewTipTopCafe/index.html",
+    "main.4b9e18e6.css.map": "/NewTipTopCafe/static/css/main.4b9e18e6.css.map",
+    "main.af5514ed.js.map": "/NewTipTopCafe/static/js/main.af5514ed.js.map",
+    "453.fd2f0c4a.chunk.js.map": "/NewTipTopCafe/static/js/453.fd2f0c4a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b9e18e6.css",
+    "static/js/main.af5514ed.js"
+  ]
+}
